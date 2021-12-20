@@ -1,6 +1,5 @@
-// TODO: Create a function to generate markdown for README
+// Function to generate markdown for README
 function generateMarkdown(dataObj) {
-
   return `
   # ${dataObj.title}
   ![License Badge](https://img.shields.io/badge/license-${dataObj.license}-brightgreen)
@@ -24,7 +23,7 @@ function generateMarkdown(dataObj) {
   
   ## License
   ![License Badge](https://img.shields.io/badge/license-${dataObj.license}-brightgreen)
-  This application is covered by ${dataObj.license} license.
+  This application is covered by the ${dataObj.license} license.
   
   ## Contributing
   ${dataObj.contribution}
@@ -36,7 +35,6 @@ function generateMarkdown(dataObj) {
   Created by: [${dataObj.username}](https://github.com/${dataObj.username})
   For any additional questions, I can be reached at [${dataObj.email}](mailto:${dataObj.email})
   `;
-
 }
 
 module.exports = generateMarkdown;
