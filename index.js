@@ -107,7 +107,7 @@ function promptUser() {
 // TODO: Create a function to write README file
 function writeToFile(data) {
 
-    fs.writeFile('README.md', generateMarkdown(data), err => {
+    fs.writeFile('./dist/README.md', generateMarkdown(data), err => {
         if (err) throw err;
         console.log('README complete!');
     });
@@ -119,7 +119,7 @@ function init() {
 
     
     
-    promptUser().then(answers => writeToFile(answers));
+    promptUser().then(answers => {console.log(answers)}).then(answers => writeToFile(answers));
 
 }
 
